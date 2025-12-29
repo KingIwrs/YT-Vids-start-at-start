@@ -1,19 +1,25 @@
 {
-    "manifest_version": 3,
-    "version": "0.1.0",
-    "name": "Start at Start",
-    "description": "Makes sure youtube videos start at the beginning instead of an arbitrary point.",
-    "browser_specific_settings": {
-        "gecko": {
-            "id": "startatstart@kingiwrs.com"
-        }
-    },
-    "content_scripts": [
-        {
-            "matches": ["https://www.youtube.com/watch?*"],
-            "js": ["/js/js.js"],
-            "run_at": "document_idle"
-        }
-    ]
+  "manifest_version": 3,
+  "version": "0.1.0",
+  "name": "YT Vids Start at Start",
+  "description": "Makes sure youtube videos start at the beginning instead of an arbitrary point.",
+  "icons": {
+    "512": "/assets/YTVidsStartAtStart.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "ytvidsstartatstart@kingiwrs.com"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/watch?*"
+      ],
+      "js": [
+        "/js/js.js"
+      ],
+      "run_at": "document_start"
+    }
+  ]
 }
-
